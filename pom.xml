@@ -165,6 +165,7 @@
             <artifactId>cyclonedx-core-java</artifactId>
             <version>7.3.2</version>
         </dependency>
+        
 
         <!-- Test dependencies -->
         <dependency>
@@ -186,6 +187,41 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>5.8.2</version> 
+    <scope>test</scope>
+</dependency>
+<dependency>
+<groupId>org.json</groupId>
+<artifactId>json</artifactId>
+<version>20240303</version>
+</dependency>
+        <!--<dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.7.0</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.7.0</version>
+        <scope>test</scope>
+    </dependency>-->
+    <!--<dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-inline</artifactId>
+        <version>3.6.28</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+    <groupId>org.hamcrest</groupId>
+    <artifactId>hamcrest-library</artifactId>
+    <version>2.2</version>--> <!-- Aggiorna la versione se necessario 
+    <scope>test</scope>
+</dependency>-->
+        <dependency>
             <groupId>org.apache.maven.plugin-testing</groupId>
             <artifactId>maven-plugin-testing-harness</artifactId>
             <version>3.3.0</version>
@@ -203,6 +239,11 @@
             <version>4.9.0</version>
             <scope>test</scope>
         </dependency>
+       <!-- <dependency>
+             <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.13</version>
+        </dependency>-->
     </dependencies>
 
     <build>
@@ -382,6 +423,11 @@
                                 </goals>
                             </execution>
                         </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-site-plugin</artifactId>
+                         <version>3.9.1</version>  <!--Ometti la versione se desideri utilizzare quella predefinita -->
                     </plugin>
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
