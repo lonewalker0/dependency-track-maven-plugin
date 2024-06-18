@@ -72,6 +72,20 @@ public final class TestMojoLoader {
         return policyMojo;
     }
 
+    public static DownloadVexMojo loadDownloadVexMojo(MojoRule mojoRule) throws Exception {
+        DownloadVexMojo downloadVexMojo = (DownloadVexMojo) mojoRule.lookupConfiguredMojo(getPomFile(), "download-vex");
+        downloadVexMojo.setPluginContext(getPluginContext());
+        assertNotNull(downloadVexMojo);
+        return downloadVexMojo;
+    }
+    
+    public static UploadVexMojo loadUploadVexMojo(MojoRule mojoRule) throws Exception {
+        UploadVexMojo uploadVexMojo = (UploadVexMojo) mojoRule.lookupConfiguredMojo(getPomFile(), "upload-vex");
+        uploadVexMojo.setPluginContext(getPluginContext());
+        assertNotNull(uploadVexMojo);
+        return uploadVexMojo;
+    }
+
     private static Map<String, String> getPluginContext() {
         Map<String, String> map = new HashMap<>();
         map.put("groupId", "foo");
