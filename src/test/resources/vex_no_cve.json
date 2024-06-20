@@ -1,0 +1,632 @@
+{
+    "specVersion": "1.5",
+    "metadata": {
+        "component": {
+            "externalReferences": [{
+                "type": "website",
+                "url": "http://maven.apache.org"
+            }],
+            "bom-ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334",
+            "name": "myproject",
+            "type": "library",
+            "version": "0.3"
+        },
+        "tools": [{
+            "vendor": "OWASP",
+            "name": "Dependency-Track",
+            "version": "4.11.1"
+        }],
+        "timestamp": "2024-06-07T14:17:52Z"
+    },
+    "serialNumber": "urn:uuid:681d53c9-c125-43d0-95af-a3277684990d",
+    "bomFormat": "CycloneDX",
+    "vulnerabilities": [
+        {
+            "bom-ref": "6243fa57-3ead-4bb3-a059-81cd3487d5d9",
+            "ratings": [
+                {
+                    "severity": "high",
+                    "score": 7.5,
+                    "method": "CVSSv2",
+                    "vector": "(AV:N/AC:L/Au:N/C:P/I:P/A:P)",
+                    "source": {
+                        "name": "NVD",
+                        "url": "https://nvd.nist.gov/"
+                    }
+                },
+                {
+                    "severity": "critical",
+                    "score": 9.8,
+                    "method": "CVSSv3",
+                    "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                    "source": {
+                        "name": "NVD",
+                        "url": "https://nvd.nist.gov/"
+                    }
+                }
+            ],
+            "description": "The fix issued for CVE-2020-17530 was incomplete. So from Apache Struts 2.0.0 to 2.5.29, still some of the tag\u2019s attributes could perform a double evaluation if a developer applied forced OGNL evaluation by using the %{...} syntax. Using forced OGNL evaluation on untrusted user input can lead to a Remote Code Execution and security degradation.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2021-31805",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2022-04-12T16:15:00Z",
+            "cwes": [917],
+            "updated": "2022-07-25T18:15:00Z"
+        },
+        {
+            "bom-ref": "269f786b-05b2-4ed4-bb92-67cc0a9b3ca8",
+            "ratings": [{
+                "severity": "medium",
+                "score": 6.5,
+                "method": "CVSSv3",
+                "vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+                "source": {
+                    "name": "NVD",
+                    "url": "https://nvd.nist.gov/"
+                }
+            }],
+            "description": "Allocation of Resources Without Limits or Throttling vulnerability in Apache Software Foundation Apache Struts.This issue affects Apache Struts: through 2.5.30, through 6.1.2. Upgrade to Struts 2.5.31 or 6.1.2.1 or greater.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2023-34149",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2023-06-14T08:15:00Z",
+            "cwes": [770],
+            "updated": "2023-07-06T19:15:00Z"
+        },
+        {
+            "bom-ref": "8495a39b-6d9a-42e3-a648-744aa476361e",
+            "ratings": [{
+                "severity": "high",
+                "score": 7.5,
+                "method": "CVSSv3",
+                "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "source": {
+                    "name": "NVD",
+                    "url": "https://nvd.nist.gov/"
+                }
+            }],
+            "description": "Allocation of Resources Without Limits or Throttling vulnerability in Apache Software Foundation Apache Struts.This issue affects Apache Struts: through 2.5.30, through 6.1.2. Upgrade to Struts 2.5.31 or 6.1.2.1 or greater",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2023-34396",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2023-06-14T08:15:00Z",
+            "cwes": [770],
+            "updated": "2023-07-06T19:15:00Z"
+        },
+        {
+            "bom-ref": "d2ee0dfd-73eb-4c9d-9538-8d2e9a3c55c9",
+            "ratings": [{
+                "severity": "critical",
+                "score": 9.8,
+                "method": "CVSSv3",
+                "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "source": {
+                    "name": "NVD",
+                    "url": "https://nvd.nist.gov/"
+                }
+            }],
+            "description": "An attacker can manipulate file upload params to enable paths traversal and under some circumstances this can lead to uploading a malicious file which can be used to perform Remote Code Execution. Users are recommended to upgrade to versions Struts 2.5.33 or Struts 6.3.0.2 or greater to fix this issue.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2023-50164",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2023-12-07T09:15:00Z",
+            "cwes": [552],
+            "updated": "2023-12-20T17:58:00Z"
+        },
+        {
+            "bom-ref": "ee1d8374-e051-43cd-83af-ae70f68fb2f5",
+            "ratings": [
+                {
+                    "severity": "medium",
+                    "score": 5.8,
+                    "method": "CVSSv2",
+                    "vector": "(AV:N/AC:M/Au:N/C:P/I:P/A:N)",
+                    "source": {
+                        "name": "NVD",
+                        "url": "https://nvd.nist.gov/"
+                    }
+                },
+                {
+                    "severity": "medium",
+                    "score": 4.8,
+                    "method": "CVSSv3",
+                    "vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+                    "source": {
+                        "name": "NVD",
+                        "url": "https://nvd.nist.gov/"
+                    }
+                }
+            ],
+            "description": "In Apache Commons IO before 2.7, When invoking the method FileNameUtils.normalize with an improper input string, like \"//../foo\", or \"\\\\..\\foo\", the result would be the same value, thus possibly providing access to files in the parent directory, but not further above (thus \"limited\" path traversal), if the calling code would use the result to construct a path value.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2021-29425",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2021-04-13T07:15:00Z",
+            "cwes": [22],
+            "updated": "2023-11-07T03:32:00Z"
+        },
+        {
+            "bom-ref": "03ce4340-5de0-41eb-8ed2-2bce87d12a31",
+            "ratings": [{
+                "severity": "high",
+                "score": 7.5,
+                "method": "CVSSv3",
+                "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "source": {
+                    "name": "NVD",
+                    "url": "https://nvd.nist.gov/"
+                }
+            }],
+            "description": "Apache Commons FileUpload before 1.5 does not limit the number of request parts to be processed resulting in the possibility of an attacker triggering a DoS with a malicious upload or series of uploads. Note that, like all of the file upload limits, the new configuration option (FileUploadBase#setFileCountMax) is not enabled by default and must be explicitly configured.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2023-24998",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2023-02-20T16:15:00Z",
+            "cwes": [770],
+            "updated": "2024-02-16T19:11:00Z"
+        },
+        {
+            "bom-ref": "1f802ed9-a492-45c3-9234-a266b2a2ee0f",
+            "ratings": [
+                {
+                    "severity": "medium",
+                    "score": 5,
+                    "method": "CVSSv2",
+                    "vector": "(AV:N/AC:L/Au:N/C:N/I:N/A:P)",
+                    "source": {
+                        "name": "NVD",
+                        "url": "https://nvd.nist.gov/"
+                    }
+                },
+                {
+                    "severity": "high",
+                    "score": 7.5,
+                    "method": "CVSSv3",
+                    "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                    "source": {
+                        "name": "NVD",
+                        "url": "https://nvd.nist.gov/"
+                    }
+                }
+            ],
+            "description": "jackson-databind before 2.13.0 allows a Java StackOverflow exception and denial of service via a large depth of nested objects.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2020-36518",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2022-03-11T07:15:00Z",
+            "cwes": [787],
+            "updated": "2022-11-29T22:12:00Z"
+        },
+        {
+            "bom-ref": "ccc89984-3dcb-4b20-b369-9ab9b8c37a53",
+            "ratings": [{
+                "severity": "high",
+                "score": 7.5,
+                "method": "CVSSv3",
+                "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "source": {
+                    "name": "NVD",
+                    "url": "https://nvd.nist.gov/"
+                }
+            }],
+            "description": "In FasterXML jackson-databind before versions 2.13.4.1 and 2.12.17.1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2022-42003",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2022-10-02T05:15:00Z",
+            "cwes": [502],
+            "updated": "2023-12-20T10:15:00Z"
+        },
+        {
+            "bom-ref": "564ed3cd-ef0f-49d1-8b94-981293075ff8",
+            "ratings": [{
+                "severity": "high",
+                "score": 7.5,
+                "method": "CVSSv3",
+                "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "source": {
+                    "name": "NVD",
+                    "url": "https://nvd.nist.gov/"
+                }
+            }],
+            "description": "In FasterXML jackson-databind before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. An application is vulnerable only with certain customized choices for deserialization.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2022-42004",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2022-10-02T05:15:00Z",
+            "cwes": [502],
+            "updated": "2022-12-02T15:10:00Z"
+        },
+        {
+            "bom-ref": "16d3ccaf-8aad-4c97-b280-4ef080b8f46d",
+            "ratings": [{
+                "severity": "high",
+                "score": 7.5,
+                "method": "CVSSv3",
+                "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "source": {
+                    "name": "NVD",
+                    "url": "https://nvd.nist.gov/"
+                }
+            }],
+            "description": "jackson-databind 2.10.x through 2.12.x before 2.12.6 and 2.13.x before 2.13.1 allows attackers to cause a denial of service (2 GB transient heap usage per read) in uncommon situations involving JsonNode JDK serialization.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2021-46877",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2023-03-18T22:15:00Z",
+            "cwes": [770],
+            "updated": "2023-08-08T14:21:00Z"
+        },
+        {
+            "bom-ref": "ccd74e9e-dc8a-47e9-bb10-e4bc49462d07",
+            "ratings": [{
+                "severity": "critical",
+                "score": 9.8,
+                "method": "CVSSv3",
+                "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "source": {
+                    "name": "NVD",
+                    "url": "https://nvd.nist.gov/"
+                }
+            }],
+            "description": "SnakeYaml's Constructor() class does not restrict types which can be instantiated during deserialization. Deserializing yaml content provided by an attacker can lead to remote code execution. We recommend using SnakeYaml's SafeConsturctor when parsing untrusted content to restrict deserialization. We recommend upgrading to version 2.0 and beyond.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2022-1471",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2022-12-01T11:15:00Z",
+            "cwes": [502],
+            "updated": "2023-11-19T15:15:00Z"
+        },
+        {
+            "bom-ref": "7ccecc00-422e-4050-8666-cb68085eddb8",
+            "ratings": [{
+                "severity": "high",
+                "score": 7.5,
+                "method": "CVSSv3",
+                "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "source": {
+                    "name": "NVD",
+                    "url": "https://nvd.nist.gov/"
+                }
+            }],
+            "description": "The package org.yaml:snakeyaml from 0 and before 1.31 are vulnerable to Denial of Service (DoS) due missing to nested depth limitation for collections.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2022-25857",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2022-08-30T05:15:00Z",
+            "cwes": [776],
+            "updated": "2024-03-15T11:15:00Z"
+        },
+        {
+            "bom-ref": "5c0d17b9-c4f2-4b0b-8fd6-b873848381e2",
+            "ratings": [{
+                "severity": "medium",
+                "score": 6.5,
+                "method": "CVSSv3",
+                "vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+                "source": {
+                    "name": "NVD",
+                    "url": "https://nvd.nist.gov/"
+                }
+            }],
+            "description": "Using snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stackoverflow.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2022-38749",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2022-09-05T10:15:00Z",
+            "cwes": [787],
+            "updated": "2024-03-15T11:15:00Z"
+        },
+        {
+            "bom-ref": "0679ccd9-f038-443c-a900-b74c3a4faee2",
+            "ratings": [{
+                "severity": "medium",
+                "score": 5.5,
+                "method": "CVSSv3",
+                "vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                "source": {
+                    "name": "NVD",
+                    "url": "https://nvd.nist.gov/"
+                }
+            }],
+            "description": "Using snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stackoverflow.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2022-38750",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2022-09-05T10:15:00Z",
+            "cwes": [787],
+            "updated": "2024-03-15T11:15:00Z"
+        },
+        {
+            "bom-ref": "fe009c0d-4e36-41ed-b6e9-5b04c9573816",
+            "ratings": [{
+                "severity": "medium",
+                "score": 6.5,
+                "method": "CVSSv3",
+                "vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+                "source": {
+                    "name": "NVD",
+                    "url": "https://nvd.nist.gov/"
+                }
+            }],
+            "description": "Using snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stackoverflow.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2022-38751",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2022-09-05T10:15:00Z",
+            "cwes": [787],
+            "updated": "2024-03-15T11:15:00Z"
+        },
+        {
+            "bom-ref": "896edc2a-9afb-42ad-ae92-91ab2db2e17c",
+            "ratings": [{
+                "severity": "medium",
+                "score": 6.5,
+                "method": "CVSSv3",
+                "vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+                "source": {
+                    "name": "NVD",
+                    "url": "https://nvd.nist.gov/"
+                }
+            }],
+            "description": "Using snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stack-overflow.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2022-38752",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2022-09-05T10:15:00Z",
+            "cwes": [787],
+            "updated": "2024-03-15T11:15:00Z"
+        },
+        {
+            "bom-ref": "00c6db00-b25f-4be3-a525-9ab9bc4d1cd6",
+            "ratings": [{
+                "severity": "medium",
+                "score": 6.5,
+                "method": "CVSSv3",
+                "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                "source": {
+                    "name": "NVD",
+                    "url": "https://nvd.nist.gov/"
+                }
+            }],
+            "description": "Those using Snakeyaml to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stack overflow. This effect may support a denial of service attack.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2022-41854",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2022-11-11T13:15:00Z",
+            "cwes": [787],
+            "updated": "2024-03-15T11:15:00Z"
+        },
+        {
+            "bom-ref": "81fc94dc-3372-4d0f-b79a-d3f18ec1726f",
+            "ratings": [
+                {
+                    "severity": "low",
+                    "score": 2.1,
+                    "method": "CVSSv2",
+                    "vector": "(AV:L/AC:L/Au:N/C:P/I:N/A:N)",
+                    "source": {
+                        "name": "NVD",
+                        "url": "https://nvd.nist.gov/"
+                    }
+                },
+                {
+                    "severity": "medium",
+                    "score": 5.5,
+                    "method": "CVSSv3",
+                    "vector": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                    "source": {
+                        "name": "NVD",
+                        "url": "https://nvd.nist.gov/"
+                    }
+                }
+            ],
+            "description": "In engineSetMode of BaseBlockCipher.java, there is a possible incorrect cryptographic algorithm chosen due to an incomplete comparison. This could lead to local information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android-10Android ID: A-148517383",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2020-0187",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2020-06-11T15:15:00Z",
+            "updated": "2020-06-12T16:42:00Z"
+        },
+        {
+            "bom-ref": "24c94043-7f51-469b-9ee8-d6fe61456ed2",
+            "ratings": [
+                {
+                    "severity": "medium",
+                    "score": 6.8,
+                    "method": "CVSSv2",
+                    "vector": "(AV:N/AC:M/Au:N/C:P/I:P/A:P)",
+                    "source": {
+                        "name": "NVD",
+                        "url": "https://nvd.nist.gov/"
+                    }
+                },
+                {
+                    "severity": "high",
+                    "score": 8.1,
+                    "method": "CVSSv3",
+                    "vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                    "source": {
+                        "name": "NVD",
+                        "url": "https://nvd.nist.gov/"
+                    }
+                }
+            ],
+            "description": "An issue was discovered in Legion of the Bouncy Castle BC Java 1.65 and 1.66. The OpenBSDBCrypt.checkPassword utility method compared incorrect data when checking the password, allowing incorrect passwords to indicate they were matching with previously hashed ones that were different.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2020-28052",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2020-12-18T01:15:00Z",
+            "updated": "2023-11-07T03:21:00Z"
+        },
+        {
+            "bom-ref": "2f2f7d06-51f5-4d89-8126-30e96b581d81",
+            "ratings": [{
+                "severity": "medium",
+                "score": 5.3,
+                "method": "CVSSv3",
+                "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                "source": {
+                    "name": "NVD",
+                    "url": "https://nvd.nist.gov/"
+                }
+            }],
+            "description": "Bouncy Castle For Java before 1.74 is affected by an LDAP injection vulnerability. The vulnerability only affects applications that use an LDAP CertStore from Bouncy Castle to validate X.509 certificates. During the certificate validation process, Bouncy Castle inserts the certificate's Subject Name into an LDAP search filter without any escaping, which leads to an LDAP injection vulnerability.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2023-33201",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2023-07-05T03:15:00Z",
+            "cwes": [295],
+            "updated": "2023-08-24T19:15:00Z"
+        },
+        {
+            "bom-ref": "3b00448a-2900-411f-8460-dafc34ff33e2",
+            "ratings": [{
+                "severity": "medium",
+                "score": 5.5,
+                "method": "CVSSv3",
+                "vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                "source": {
+                    "name": "NVD",
+                    "url": "https://nvd.nist.gov/"
+                }
+            }],
+            "description": "Bouncy Castle for Java before 1.73 contains a potential Denial of Service (DoS) issue within the Bouncy Castle org.bouncycastle.openssl.PEMParser class. This class parses OpenSSL PEM encoded streams containing X.509 certificates, PKCS8 encoded keys, and PKCS7 objects. Parsing a file that has crafted ASN.1 data through the PEMParser causes an OutOfMemoryError, which can enable a denial of service attack. (For users of the FIPS Java API: BC-FJA 1.0.2.3 and earlier are affected; BC-FJA 1.0.2.4 is fixed.)",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2023-33202",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2023-11-23T16:15:00Z",
+            "cwes": [400],
+            "updated": "2024-01-25T14:15:00Z"
+        },
+        {
+            "bom-ref": "2eb5a4a2-2465-4d05-95ef-aa3634de0e48",
+            "ratings": [{
+                "severity": "unknown",
+                "method": "other",
+                "source": {
+                    "name": "NVD",
+                    "url": "https://nvd.nist.gov/"
+                }
+            }],
+            "description": "An issue was discovered in ECCurve.java and ECCurve.cs in Bouncy Castle Java (BC Java) before 1.78, BC Java LTS before 2.73.6, BC-FJA before 1.0.2.5, and BC C# .Net before 2.3.1. Importing an EC certificate with crafted F2m parameters can lead to excessive CPU consumption during the evaluation of the curve parameters.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2024-29857",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2024-05-14T15:17:00Z",
+            "updated": "2024-05-14T16:13:00Z"
+        },
+        
+        {
+            "bom-ref": "5c3d8372-fbac-4622-91a2-518eee433e1a",
+            "ratings": [{
+                "severity": "unknown",
+                "method": "other",
+                "source": {
+                    "name": "NVD",
+                    "url": "https://nvd.nist.gov/"
+                }
+            }],
+            "description": "An issue was discovered in Bouncy Castle Java Cryptography APIs before BC 1.78. When endpoint identification is enabled in the BCJSSE and an SSL socket is created without an explicit hostname (as happens with HttpsURLConnection), hostname verification could be performed against a DNS-resolved IP address in some situations, opening up a possibility of DNS poisoning.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2024-34447",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2024-05-03T16:15:00Z",
+            "updated": "2024-05-14T15:39:00Z"
+        },
+        {
+            "bom-ref": "07898c5a-cd09-4b29-9c89-b08888085880",
+            "ratings": [{
+                "severity": "high",
+                "score": 7.1,
+                "method": "CVSSv3",
+                "vector": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+                "source": {
+                    "name": "NVD",
+                    "url": "https://nvd.nist.gov/"
+                }
+            }],
+            "description": "Use of Java's default temporary directory for file creation in `FileBackedOutputStream` in Google Guava versions 1.0 to 31.1 on Unix systems and Android Ice Cream Sandwich allows other users and apps on the machine with access to the default Java temporary directory to be able to access the files created by the class. Even though the security vulnerability is fixed in version 32.0.0, we recommend using version 32.0.1 as version 32.0.0 breaks some functionality under Windows.",
+            "affects": [{"ref": "f6abded1-2e56-4630-8b7d-f6866ec3d334"}],
+            "id": "CVE-2023-2976",
+            "source": {
+                "name": "NVD",
+                "url": "https://nvd.nist.gov/"
+            },
+            "published": "2023-06-14T18:15:00Z",
+            "cwes": [552],
+            "updated": "2024-02-13T19:15:00Z"
+        }
+        
+    ],
+    "version": 1
+}
