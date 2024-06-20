@@ -45,10 +45,16 @@ public class SuppressionXmlVexJsonMojo extends AbstractMojo {
     @Parameter(defaultValue = "${project}", readonly = true, required = true)
     private MavenProject project;
 
+    public SuppressionXmlVexJsonMojo() {}
 
+    public SuppressionXmlVexJsonMojo(File suppressionXml, File vexJson, MavenProject project) {
+        this.suppressionXml = suppressionXml;
+        this.vexJson = vexJson;
+        this.project = project;
+    }
     
     
-    public void execute() throws MojoExecutionException {
+    /*public void execute() throws MojoExecutionException {
         Log log = getLog(); // Ottieni l'istanza del log da AbstractMojo
         log.info("Starting suppression matching...");
 
@@ -65,5 +71,49 @@ public class SuppressionXmlVexJsonMojo extends AbstractMojo {
         } catch (Exception e) {
             throw new MojoExecutionException("Error matching suppressions", e);
         }
+    }*/
+    public void execute() throws MojoExecutionException {
+        Log log = getLog();
+        log.info("Starting suppression matching...");
+
+        performSuppressionMatching(log);
+    }
+
+    void performSuppressionMatching(Log log) throws MojoExecutionException {
+        String multiModuleProjectDir = System.getProperty("maven.multiModuleProjectDirectory");
+        if (!suppressionXml.exists()) {
+            log.error("Suppression XML file not found: " + suppressionXml.getAbsolutePath());
+            throw new MojoExecutionException("Suppression XML file not found: " + suppressionXml.getAbsolutePath());
+        }
+
+        if (!vexJson.exists()) {
+            log.error("VEX JSON file not found: " + vexJson.getAbsolutePath());
+            throw new MojoExecutionException("VEX JSON file not found: " + vexJson.getAbsolutePath());
+        }
+        if (multiModuleProjectDir != null && !multiModuleProjectDir.equals(project.getBasedir().getAbsolutePath())) {
+            log.info("Skipping module: " + project.getName());
+            return;
+        }
+
+        try {
+            SuppressionMatcher suppressionMatcher = new SuppressionMatcher(suppressionXml, vexJson, log);
+            suppressionMatcher.matchSuppressions();
+            log.info("Suppression matching completed successfully.");
+        } catch (Exception e) {
+            throw new MojoExecutionException("Error matching suppressions", e);
+        }
+    }
+
+    // Setters for testing
+    public void setSuppressionXml(File suppressionXml) {
+        this.suppressionXml = suppressionXml;
+    }
+
+    public void setVexJson(File vexJson) {
+        this.vexJson = vexJson;
+    }
+
+    public void setProject(MavenProject project) {
+        this.project = project;
     }
 }

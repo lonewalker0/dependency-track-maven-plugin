@@ -55,7 +55,12 @@ public class DownloadVexMojo extends AbstractDependencyTrackMojo {
         }
         
         try {
+            logger.debug("Attempting to get project with name: " + projectName + " and version: " + projectVersion);
             Project project = projectAction.getProject(projectName, projectVersion);
+            if (project == null) {
+                throw new MojoExecutionException("Project not found");
+            }
+            logger.debug("Project found with UUID: " + project.getUuid());
             projectUuid=project.getUuid();
             Response<String> vexResponse = vexClient.downloadVex(projectUuid);
             if (vexResponse.isSuccess() && vexResponse.getBody().isPresent()) {
@@ -91,8 +96,19 @@ public class DownloadVexMojo extends AbstractDependencyTrackMojo {
         }
     }
 
-    void setMavenProject(MavenProject mp) {
+    public void setMavenProject(MavenProject mp) {
         this.mavenProject = mp;
+    }
+    public void setProjectUuid(String projectUuid) {
+        this.projectUuid = projectUuid;
+    }
+
+    public void setOutputDirectory(File outputDirectory) {
+        this.outputDirectory = outputDirectory;
+    }
+
+    public void setOutputFileName(String outputFileName) {
+        this.outputFileName = outputFileName;
     }
     
 }
