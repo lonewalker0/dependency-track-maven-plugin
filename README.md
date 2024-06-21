@@ -150,7 +150,7 @@ quality control
 * [Get Inherited Risk Score](#get-inherited-risk-score) - Useful for CI/CD quality control
 * [Get Metrics](#get-metrics) - Useful for CI/CD quality control
 * [Delete Project](#delete-project) - Deletes a project from the Dependency-Track server
-* [Download Vex file](#download-vex) - Download file vex.json from Dependency-Track server
+* [Download Vex](#download-vex) - Download file vex.json from Dependency-Track server
 * [Modify Vex](#modify-vex) - Modify vex.json to make some vulnerabilities marked as False Positive
 * [Upload Vex](#upload-vex) -Upload vex.json to Dependency-Track Server
 
@@ -481,6 +481,80 @@ whatever overridden values that are supplied.
 
 #### Configuration
 See common configuration above
+
+### Download Vex
+
+Download the Vex (Vulnerability Exploitability eXchange) in Json format for the current project from Dependency-Track server.
+
+#### Pom Usage
+
+Binds by default to the Verify Phase in the Maven lifecycle.
+
+#### Dependencies 
+Depends on a project existing in the Dependency-Track server that matches the current project artifactId and version or
+whatever overridden values that are supplied.
+
+#### Configuration
+The `download-vex` goal supports the following XML configuration in the POM:
+
+|Property                  |Required|Default Value           |Description                                                 |
+|--------------------------|--------|------------------------|------------------------------------------------------------|
+|outputDirectory           |true    |project.build.directory |Directory where to download the vex.json                    |
+|outputFileName            |true    |vex.json                |how to name the vex file to download from Dependency-Track  |
+
+
+#### Direct Usage
+```
+mvn io.github.pmckeown:dependency-track-maven-plugin:download-vex \
+  -Ddependency-track.apiKey=${DEPENDENCY_TRACK_API_KEY}
+```
+
+### Modify Vex
+
+Given the `suppression.xml` file and the vex file, the vex file needs to be modified by marking the vulnerabilities listed in suppression.xml as false positives.
+
+#### Pom Usage
+
+Does not bind by default to any Phase in the Maven lifecycle. This goal must be executed after `download-vex` goal. If it is run first the build fails not finding the vex file.
+
+#### Dependencies 
+Depends on a project existing in the Dependency-Track server that matches the current project artifactId and version or
+whatever overridden values that are supplied.
+
+#### Configuration
+The `modify-vex` goal supports the following XML configuration in the POM:
+
+|Property                  |Required|Default Value                  |Description                         |
+|-----------------|--------|----------------------------------------|------------------------------------|
+|suppressionXml   |true    |project.build.directory/suppression.xml |Path for the suppression.xml file   |
+|vexJson          |true    |project.basedir/vex.json                |Path for the vex.json file          |
+
+**Example values to avoid problems**
+For the `vexJson` property:
+
+```
+<configuration>
+  <vexJson>target/vex.json</vexJson>
+</configuration>
+```
+
+#### Structure of the suppression.xml
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+    <suppress until="2020-01-01Z">
+        <notes><![CDATA[
+        Suppresses a given CVE for a dependency with the given sha1 until the current date is 1 Jan 2020 or beyond.
+        ]]></notes>
+        <sha1>384FAA82E193D4E4B0546059CA09572654BC3970</sha1>
+        <cve>CVE-2013-1337</cve>
+    </suppress>
+</suppressions>
+```
+
+Further docs can be found:
+* [False Positive](https://jeremylong.github.io/DependencyCheck/general/suppression.html)
 
 ## Documentation
 Further docs can be found in [doc/](doc/):
