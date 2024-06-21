@@ -553,8 +553,39 @@ For the `vexJson` property:
 </suppressions>
 ```
 
+It is recommended to use the dependency-check plugin to generate the report in html and display the xml format for the vulnerabilities you want to suppress.
+
+
 Further docs can be found:
 * [False Positive](https://jeremylong.github.io/DependencyCheck/general/suppression.html)
+
+#### Direct Usage
+```
+mvn io.github.pmckeown:dependency-track-maven-plugin:modify-vex \
+  -Ddependency-track.apiKey=${DEPENDENCY_TRACK_API_KEY}
+```
+
+### Upload Vex 
+
+Upload the `vex.json` file to Dependency-Track server. Make sure to have this file.
+
+
+
+#### Pom Usage
+
+Does not bind by default to any Phase in the Maven lifecycle. This goal must be executed after `modify-vex` goal. If it is run first the build fails not finding the vex file or you upload the same file you have downloaded.
+
+#### Dependencies 
+
+Depends on a project existing in the Dependency-Track server that matches the current project artifactId and version or
+whatever overridden values that are supplied.
+
+#### Direct Usage
+```
+mvn io.github.pmckeown:dependency-track-maven-plugin:upload-vex \
+  -Ddependency-track.apiKey=${DEPENDENCY_TRACK_API_KEY}
+```
+
 
 ## Documentation
 Further docs can be found in [doc/](doc/):
