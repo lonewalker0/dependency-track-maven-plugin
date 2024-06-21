@@ -150,6 +150,9 @@ quality control
 * [Get Inherited Risk Score](#get-inherited-risk-score) - Useful for CI/CD quality control
 * [Get Metrics](#get-metrics) - Useful for CI/CD quality control
 * [Delete Project](#delete-project) - Deletes a project from the Dependency-Track server
+* [Download Vex file](#download-vex) - Download file vex.json from Dependency-Track server
+* [Modify Vex](#modify-vex) - Modify vex.json to make some vulnerabilities marked as False Positive
+* [Upload Vex](#upload-vex) -Upload vex.json to Dependency-Track Server
 
 
 ### Upload Bill of Material
