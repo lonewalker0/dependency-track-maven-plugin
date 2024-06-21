@@ -529,7 +529,7 @@ The `modify-vex` goal supports the following XML configuration in the POM:
 |suppressionXml   |true    |project.build.directory/suppression.xml |Path for the suppression.xml file   |
 |vexJson          |true    |project.basedir/vex.json                |Path for the vex.json file          |
 
-**Example values to avoid problems**
+**Example values to avoid problems** \
 For the `vexJson` property:
 
 ```
@@ -557,7 +557,7 @@ It is recommended to use the dependency-check plugin to generate the report in h
 
 **Consideration** \
 
-At the moment the xml format recognise only the cve or vulnerabilityname.
+At the moment the xml format recognise only the cve or vulnerabilityname. \
 `<cve>CVE-aaaa-id</cve>` \
 `<vulnerabilityName>CVE-aaaa-id</vulnerabilityName>`
 
