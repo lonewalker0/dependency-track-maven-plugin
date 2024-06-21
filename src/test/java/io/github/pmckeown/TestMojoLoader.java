@@ -1,6 +1,8 @@
 package io.github.pmckeown;
 
 import io.github.pmckeown.dependencytrack.finding.FindingsMojo;
+import io.github.pmckeown.dependencytrack.vexdownload.DownloadVexMojo;
+import io.github.pmckeown.dependencytrack.vexupload.UploadVexMojo;
 import io.github.pmckeown.dependencytrack.metrics.MetricsMojo;
 import io.github.pmckeown.dependencytrack.policyviolation.PolicyViolationsMojo;
 import io.github.pmckeown.dependencytrack.project.DeleteProjectMojo;
