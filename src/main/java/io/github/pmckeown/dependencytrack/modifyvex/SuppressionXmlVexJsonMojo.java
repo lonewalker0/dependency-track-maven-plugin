@@ -81,6 +81,10 @@ public class SuppressionXmlVexJsonMojo extends AbstractMojo {
 
     void performSuppressionMatching(Log log) throws MojoExecutionException {
         String multiModuleProjectDir = System.getProperty("maven.multiModuleProjectDirectory");
+        if (multiModuleProjectDir != null && !multiModuleProjectDir.equals(project.getBasedir().getAbsolutePath())) {
+            log.info("Skipping module: " + project.getName());
+            return;
+        }
         if (!suppressionXml.exists()) {
             log.error("Suppression XML file not found: " + suppressionXml.getAbsolutePath());
             throw new MojoExecutionException("Suppression XML file not found: " + suppressionXml.getAbsolutePath());
@@ -90,10 +94,7 @@ public class SuppressionXmlVexJsonMojo extends AbstractMojo {
             log.error("VEX JSON file not found: " + vexJson.getAbsolutePath());
             throw new MojoExecutionException("VEX JSON file not found: " + vexJson.getAbsolutePath());
         }
-        if (multiModuleProjectDir != null && !multiModuleProjectDir.equals(project.getBasedir().getAbsolutePath())) {
-            log.info("Skipping module: " + project.getName());
-            return;
-        }
+        
 
         try {
             SuppressionMatcher suppressionMatcher = new SuppressionMatcher(suppressionXml, vexJson, log);

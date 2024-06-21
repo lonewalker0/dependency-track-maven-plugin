@@ -99,9 +99,7 @@ public class DownloadVexMojo extends AbstractDependencyTrackMojo {
     public void setMavenProject(MavenProject mp) {
         this.mavenProject = mp;
     }
-    public void setProjectUuid(String projectUuid) {
-        this.projectUuid = projectUuid;
-    }
+    
 
     public void setOutputDirectory(File outputDirectory) {
         this.outputDirectory = outputDirectory;
@@ -109,6 +107,14 @@ public class DownloadVexMojo extends AbstractDependencyTrackMojo {
 
     public void setOutputFileName(String outputFileName) {
         this.outputFileName = outputFileName;
+    }
+
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
+    }
+
+    public void setProjectVersion(String projectVersion) {
+        this.projectVersion = projectVersion;
     }
     
 }

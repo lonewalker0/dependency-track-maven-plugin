@@ -18,12 +18,12 @@ public class UploadVexResponse {
         this.token = token;
     }
 
-    public String getToken() {
+    /*public String getToken() {
         return token;
     }
 
     public String toString() {
         return ToStringBuilder.reflectionToString(this, ToStringStyle.JSON_STYLE);
-    }
+    }*/
 }
 

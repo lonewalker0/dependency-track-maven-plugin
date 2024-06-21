@@ -34,7 +34,7 @@ public class UploadVexRequest {
         return base64EncodedVex;
     }
 
-    public String toString() {
+    /*public String toString() {
         return ToStringBuilder.reflectionToString(this, ToStringStyle.JSON_STYLE);
-    }
+    }*/
 }
