@@ -555,6 +555,11 @@ For the `vexJson` property:
 
 It is recommended to use the dependency-check plugin to generate the report in html and display the xml format for the vulnerabilities you want to suppress.
 
+**Consideration** \
+
+At the moment the xml format recognise only the cve or vulnerabilityname.
+`<cve>CVE-aaaa-id</cve>` \
+`<vulnerabilityName>CVE-aaaa-id</vulnerabilityName>`
 
 Further docs can be found:
 * [False Positive](https://jeremylong.github.io/DependencyCheck/general/suppression.html)
